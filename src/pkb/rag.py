@@ -73,7 +73,7 @@ class Prompt:
         sep = "\n\n" + 10 * "-" + "\n\n"
         return f"""
         Q: {state.get("question", "")}
-        
+
         Context: {sep.join(doc.page_content for doc in state.get("context", []))}
 
         Generate a concise answer based on the question and context."""
